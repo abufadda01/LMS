@@ -1,0 +1,52 @@
+.courses-container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .remove-instructor{
+    background-color: rgba(236, 58, 9, 0.846);
+    color: white;
+    margin: 10px 20px;
+    padding: 15px 45px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: 0.4s all ease-in-out;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .ins-select-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .pagination button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    margin: 0 10px;
+  }

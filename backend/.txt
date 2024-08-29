@@ -1,0 +1,143 @@
+**Basic Questions
+
+1-What is Node.js and how does it work?
+
+Node.js is a JavaScript runtime built on Chrome's V8 engine. It uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
+
+2-What is the difference between require and import?
+
+require is used in CommonJS modules and import is used in ES6 modules. ES6 modules are the standard way of importing/exporting in modern JavaScript.
+
+3-Explain the event loop in Node.js.
+
+The event loop is the mechanism that handles asynchronous operations in Node.js. It allows Node.js to perform non-blocking I/O operations by offloading operations to the system kernel whenever possible.
+
+4-What are the benefits of using Node.js?
+
+High performance for real-time applications, efficient handling of concurrent requests, and a large ecosystem of libraries through npm.
+
+
+
+
+
+**Intermediate Questions
+
+1-How do you handle asynchronous operations in Node.js?
+
+Using callbacks, promises, or async/await.
+
+2-What are streams in Node.js and how do you use them?
+
+Streams are objects that let you read data from a source or write data to a destination in a continuous fashion. They are useful for handling large amounts of data efficiently.
+
+3-What is middleware in Express.js?
+
+Middleware are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
+
+4-Explain the concept of clustering in Node.js.
+
+Clustering is a way to handle the execution of multiple instances of the Node.js process to take advantage of multi-core systems.
+
+
+ 
+**Advanced Questions
+
+1-How would you manage environment-specific configurations in Node.js?
+
+Using environment variables and configuration management tools like dotenv.
+
+2-How do you handle errors in Node.js applications?
+
+By using try-catch blocks for synchronous code, and promise .catch methods or async/await with try-catch for asynchronous code. Additionally, using error-handling middleware in Express.
+
+3-Explain the process of setting up a Node.js server with HTTPS.
+
+Using the https module to create a server, providing the SSL certificate and key.
+
+4-What is the purpose of the process object in Node.js?
+
+The process object provides information about, and control over, the current Node.js process. It can be used to handle events related to the process lifecycle, such as when the process exits.
+
+
+
+
+
+**Code-Specific Questions
+
+1-Write a function to read a file asynchronously in Node.js.
+
+const fs = require('fs').promises;
+
+async function readFileAsync(filePath) {
+    try {
+        const data = await fs.readFile(filePath, 'utf8');
+        console.log(data);
+    } catch (err) {
+        console.error('Error reading file:', err);
+    }
+}
+
+
+
+2-Explain how to use the cluster module in Node.js.
+
+const cluster = require('cluster');
+const http = require('http');
+const numCPUs = require('os').cpus().length;
+
+if (cluster.isMaster) {
+    console.log(`Master ${process.pid} is running`);
+
+    // Fork workers.
+    for (let i = 0; i < numCPUs; i++) {
+        cluster.fork();
+    }
+
+    cluster.on('exit', (worker, code, signal) => {
+        console.log(`Worker ${worker.process.pid} died`);
+    });
+} else {
+    // Workers can share any TCP connection
+    // In this case it is an HTTP server
+    http.createServer((req, res) => {
+        res.writeHead(200);
+        res.end('Hello World\n');
+    }).listen(8000);
+
+    console.log(`Worker ${process.pid} started`);
+}
+
+
+
+3- How would you implement caching in a Node.js application?
+
+Using in-memory caches like Redis, or libraries like node-cache.
+
+
+
+
+** Behavioral Questions
+
+1-Can you describe a challenging project you worked on with Node.js?
+
+Look for specific examples of problems faced, solutions implemented, and technologies used.
+
+2-How do you stay current with Node.js best practices and updates?
+
+Following blogs, attending webinars, participating in community forums, and contributing to open-source projects.
+
+3-Describe a situation where you had to improve the performance of a Node.js application.
+
+Discuss the performance issues identified, tools used for profiling, and optimizations implemented.
+
+
+
+**System Design Questions
+
+1-How would you design a RESTful API with Node.js?
+
+Using Express.js for routing, middleware for validation and authentication, and a database like MongoDB or PostgreSQL for persistence.
+
+2-How do you handle scaling Node.js applications?
+
+Through techniques such as load balancing, clustering, using a reverse proxy (like Nginx), and microservices architecture.

@@ -1,0 +1,25 @@
+.course-main-page {
+    display: flex;
+  }
+  
+  .left-column {
+    flex: 1;
+  }
+  
+  .right-column {
+    flex: 1;
+    margin: 30px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section-items {
+    margin-top: 10px;
+  }
+  
+  .section-item {
+    margin-bottom: 10px;
+  }
+  

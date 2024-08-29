@@ -1,0 +1,168 @@
+/* ContactForm.css */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .hr{
+    width: 80%;
+    margin-top:1% ;
+    margin-bottom: 1%;
+    margin-left: 10%;
+    margin-right:10% ;
+    
+    // text-align: center;
+    border: 1px solid #848484;
+}
+  .form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+ 
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-control.error {
+    border-color: red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+
+  .TicketResponse{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+
+
+  .ticketCard{
+    width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     flex-grow: 1;
+
+}
+
+
+.buttonsInTickets{
+  button {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+                margin: 1em;
+                &[disabled]{
+                      &:hover{
+                        color: rgb(177, 177, 177);
+                        &::before{
+                        width: 0;
+                        }
+                      }
+                     }
+                    //  &:nth-child(1){
+                    //   border: solid 1px red;
+                    // }
+   }
+   
+   button:nth-child(1)::before {
+
+    
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgb(72, 165, 247) 0%, #2c3eff 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+
+    
+    
+   }
+   button:nth-child(2)::before {
+
+    
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to right, rgb(72, 165, 247) 0%, #2c3eff 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+
+    
+    
+   }
+
+  
+   
+   button:hover{
+   
+   color: #ffffff;
+   cursor: pointer;
+
+
+   &::before {
+    width: 9em;
+   }
+
+
+  }
+
+}
+  }
+  

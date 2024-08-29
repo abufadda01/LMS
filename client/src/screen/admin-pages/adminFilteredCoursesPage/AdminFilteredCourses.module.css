@@ -1,0 +1,81 @@
+.adminFilteredCoursesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .adminFilteredCoursesColumn {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .adminFilteredCoursesFilters {
+    flex: 1 1 300px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .adminFilteredCoursesResults {
+    flex: 2 1 550px;
+  }
+  
+  .adminFilteredCoursesTitle {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .adminFilteredCoursesFormGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .adminFilteredCoursesLabel {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .adminFilteredCoursesInput,
+  .adminFilteredCoursesSelect {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .adminFilteredCoursesButton {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .adminFilteredCoursesButtonDisabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .adminFilteredCoursesList {
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+  .adminFilteredCoursesListItem {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  
+  .adminFilteredCoursesListItem:hover{
+    background-color: rgb(199, 199, 241);
+  }
